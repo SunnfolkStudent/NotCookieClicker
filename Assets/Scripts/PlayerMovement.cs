@@ -8,15 +8,24 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D _rigidbody2D;
+    public GameObject Ball;
+    private Transform _transform;
+
+    private Vector2 _spawnPosition;
+    
 
     public void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _transform = GetComponent<Transform>();
+        
+        
     }
 
     public void FixedUpdate()
     {
         _rigidbody2D.linearVelocityX = speed;
+       
     }
 
 
@@ -29,10 +38,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        _spawnPosition.y = _transform.localPosition.y + -1f;
+        _spawnPosition.x = -transform.localPosition.x;
+        
+        
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            _rigidbody2D.gravityScale = 1;
-            speed = 0;
+            Instantiate(Ball, _spawnPosition , Quaternion.identity);
         }
     }
 }
