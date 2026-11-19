@@ -38,8 +38,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        _spawnPosition.y = _transform.localPosition.y + -1f;
-        _spawnPosition.x = -transform.localPosition.x;
+        _spawnPosition.y = _transform.position.y + -1f;
+        _spawnPosition.x = _transform.position.x;
         
         
         if (Mouse.current.leftButton.wasPressedThisFrame)

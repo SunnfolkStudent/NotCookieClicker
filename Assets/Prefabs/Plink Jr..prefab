@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1542459185630747666}
   - component: {fileID: 6557803515029505774}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: Plink Jr.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
