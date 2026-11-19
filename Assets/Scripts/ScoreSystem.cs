@@ -13,6 +13,8 @@ public class ScoreSystem : MonoBehaviour
         
     
     [SerializeField] TMP_Text scoreText;
+    [SerializeField] TMP_Text valueText;
+    [SerializeField] TMP_Text multiplierText;
 
     public void AddScore1x()
     {
@@ -45,6 +47,7 @@ public class ScoreSystem : MonoBehaviour
             value++;
             score -= valuePrice;
             valuePrice *= 2f;
+            valueText.SetText("Plink Jr. Up: " + valuePrice);
 
         }
     }
@@ -55,6 +58,7 @@ public class ScoreSystem : MonoBehaviour
             multiplier++;
             score -= multiplierPrice;
             multiplierPrice *= 2f;
+            multiplierText.SetText("Mr. Plink Up: " + multiplierPrice);
 
         }
     }
