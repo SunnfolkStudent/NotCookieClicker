@@ -1,6 +1,7 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -25,8 +26,14 @@ public class PlayerMovement : MonoBehaviour
             speed *= -1;
         }
     }
-    
-    
-    
+
+    private void Update()
+    {
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            _rigidbody2D.gravityScale = 1;
+            speed = 0;
+        }
+    }
 }
 

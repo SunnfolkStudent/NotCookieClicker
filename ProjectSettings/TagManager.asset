@@ -9,6 +9,7 @@ TagManager:
   - 2x
   - 3x
   - 4x
+  - Wall
   layers:
   - Default
   - TransparentFX
