@@ -8,6 +8,7 @@ TagManager:
   - 1.5x
   - 2x
   - 3x
+  - 4x
   layers:
   - Default
   - TransparentFX
